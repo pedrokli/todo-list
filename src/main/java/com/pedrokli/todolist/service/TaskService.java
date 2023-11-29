@@ -39,4 +39,12 @@ public class TaskService {
                     return ResponseEntity.ok().body(updated);
                 }).orElse(ResponseEntity.notFound().build());
     }
+
+    public ResponseEntity<Object> deleteById (Long id){
+        return taskRepository.findById(id)
+                .map(taskToDelete ->{
+                    taskRepository.deleteById(id);
+                    return ResponseEntity.noContent().build();
+                }).orElse(ResponseEntity.notFound().build());
+    }
 }
