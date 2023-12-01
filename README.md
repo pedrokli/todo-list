@@ -5,6 +5,6 @@ Esse projeto é sobre uma aplicação de lista de tarefas em Java, onde é poss�
 - Java 17
 - Spring
 - H2 Databases
-- Swagger(Springfox)
+- Swagger(Springdoc)
 - Heroku
 - Postresql
