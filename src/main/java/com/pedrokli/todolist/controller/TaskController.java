@@ -3,9 +3,9 @@ package com.pedrokli.todolist.controller;
 
 import com.pedrokli.todolist.model.Task;
 import com.pedrokli.todolist.service.TaskService;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -23,10 +23,10 @@ public class TaskController {
 
     TaskService taskService;
 
-    @ApiOperation(value = "Criando uma nova tarefa")
+    @Operation(summary = "Criando uma nova tarefa")
     @ApiResponses( value = {
-            @ApiResponse(code = 201, message = "Tarefa criada com sucesso"),
-            @ApiResponse(code = 500, message = "Houve um erro ao criar a tarefa, verifique as informações")
+            @ApiResponse(responseCode = "201", description = "Tarefa criada com sucesso"),
+            @ApiResponse(responseCode = "500", description = "Houve um erro ao criar a tarefa, verifique as informações")
     })
 
     @PostMapping("/tasks")
@@ -36,10 +36,10 @@ public class TaskController {
         return taskService.createTask(task);
     }
 
-    @ApiOperation(value = "Listando todas as tarefas")
+    @Operation(summary = "Listando todas as tarefas")
     @ApiResponses( value = {
-            @ApiResponse(code = 200, message = "Tarefas listadas com sucesso"),
-            @ApiResponse(code = 500, message = "Houve um erro ao listas as tarefas")
+            @ApiResponse(responseCode = "200", description = "Tarefas listadas com sucesso"),
+            @ApiResponse(responseCode = "500", description = "Houve um erro ao listas as tarefas")
     })
 
     @GetMapping("/tasks")
@@ -49,10 +49,10 @@ public class TaskController {
         return taskService.listAllTasks();
     }
 
-    @ApiOperation(value = "Buscando uma tarefa pelo id")
+    @Operation(summary = "Buscando uma tarefa pelo id")
     @ApiResponses( value = {
-            @ApiResponse(code = 200, message = "Tarefa econtrada com sucesso"),
-            @ApiResponse(code = 404, message = "Não foi encontrada nenhuma tarefa com esse id")
+            @ApiResponse(responseCode = "200", description = "Tarefa econtrada com sucesso"),
+            @ApiResponse(responseCode = "404", description = "Não foi encontrada nenhuma tarefa com esse id")
     })
 
     @GetMapping("/tasks/{id}")
@@ -62,10 +62,10 @@ public class TaskController {
         return taskService.findTaskById(id);
     }
 
-    @ApiOperation(value = "Atualizando uma tarefa")
+    @Operation(summary = "Atualizando uma tarefa")
     @ApiResponses( value = {
-            @ApiResponse(code = 200, message = "Tarefa atualizada com sucesso"),
-            @ApiResponse(code = 404, message = "Não foi possível atualizar a tarefa")
+            @ApiResponse(responseCode = "200", description = "Tarefa atualizada com sucesso"),
+            @ApiResponse(responseCode = "404", description = "Não foi possível atualizar a tarefa")
     })
     @PutMapping("/tasks/{id}")
     @ResponseStatus(HttpStatus.OK)
@@ -74,7 +74,11 @@ public class TaskController {
 
         return taskService.updateTaskById(task,id);
     }
-
+    @Operation(summary = "Excluindo uma tarefa")
+    @ApiResponses( value = {
+            @ApiResponse(responseCode = "204", description = "Tarefa excluída com sucesso"),
+            @ApiResponse(responseCode = "404", description = "Não foi possível excluir a tarefa - Tarefa não encontrada")
+    })
     @DeleteMapping("/tasks/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public ResponseEntity<Object> deleteTaskById(@PathVariable (value = "id") Long id){

@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10110b30-f16d-4832-948f-fd9f2d17904e" name="Changes" comment="Criação do deleteById">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pedrokli/todolist/docs/SwaggerConfiguration.java" afterDir="false" />
+    <list default="true" id="10110b30-f16d-4832-948f-fd9f2d17904e" name="Changes" comment="Inserindo Swagger">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pedrokli/todolist/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pedrokli/todolist/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pedrokli/todolist/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pedrokli/todolist/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pedrokli/todolist/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pedrokli/todolist/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pedrokli/todolist/docs/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pedrokli/todolist/docs/SwaggerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701296993819</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Inserindo Swagger">
+      <created>1701455844658</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701455844658</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +178,8 @@
     <MESSAGE value="Criação do taskToUpdate" />
     <MESSAGE value="linha 39, criação do @PutMapping updateTaskById" />
     <MESSAGE value="Criação do deleteById" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação do deleteById" />
+    <MESSAGE value="Inserindo Swagger" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inserindo Swagger" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/todo_list$TodolistApplication.ic" NAME="TodolistApplication Coverage Results" MODIFIED="1701455111757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
